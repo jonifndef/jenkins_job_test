@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'mkdir build; \
                 cd build; \
-                cmake -DCMAKE_BUILD_TYPE=${params.build_type} ..; \
+                cmake -DCMAKE_BUILD_TYPE=${build_type} ..; \
                 make;'
             }
         }
