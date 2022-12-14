@@ -25,6 +25,14 @@ pipeline {
                 make;'
             }
         }
+
+        stage('Run clang-tidy') {
+            steps {
+                sh 'clang-tidy -checks=* src/main.cpp'
+            }
+        }
+
+
     }
     post {
         always {
