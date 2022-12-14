@@ -28,7 +28,7 @@ pipeline {
 
         stage('Run clang-tidy') {
             steps {
-                sh 'clang-tidy -checks=* src/main.cpp'
+                sh 'clang-tidy -checks=* src/main.cpp -extra-arg=-std=c++17'
             }
         }
 
